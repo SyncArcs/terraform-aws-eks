@@ -26,7 +26,7 @@ module "subnets" {
   environment         = local.environment
   nat_gateway_enabled = true
   single_nat_gateway  = true
-  availability_zones  = ["${local.region}a", "${local.region}b",]
+  availability_zones  = ["${local.region}a", "${local.region}b", ]
   vpc_id              = module.vpc.id
   type                = "public-private"
   igw_id              = module.vpc.igw_id
